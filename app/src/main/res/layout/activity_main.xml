@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Fragment显示内容的容器 -->
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_layout">
+    </FrameLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/nav_layout"
+        android:background="@color/line_bg" />
+
+    <LinearLayout
+        android:id="@+id/nav_layout"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FCFCFC">
+
+        <!-- 设备 -->
+        <RelativeLayout
+            android:id="@+id/rlHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_nav_rl"
+            android:paddingTop="1dp">
+
+            <RadioButton
+                android:id="@+id/rbtnHome"
+                style="@style/nav_radio_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_home"
+                android:text="设备"
+                android:textSize="11sp"
+                android:textColor="@drawable/nav_selector_text_color" />
+        </RelativeLayout>
+
+        <!-- 添加 -->
+        <RelativeLayout
+            android:id="@+id/rlAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingTop="1dp"
+            android:background="@drawable/selector_nav_rl"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rbtnAdd"
+                style="@style/nav_radio_style"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:drawableTop="@drawable/selector_add"/>
+
+        </RelativeLayout>
+
+        <!-- 个人中心 -->
+        <RelativeLayout
+            android:id="@+id/rlMe"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingTop="1dp"
+            android:background="@drawable/selector_nav_rl"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/rbtnMe"
+                style="@style/nav_radio_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableTop="@drawable/selector_me"
+                android:text="我"
+                android:textSize="11sp"
+                android:textColor="@drawable/nav_selector_text_color" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
